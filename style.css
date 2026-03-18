@@ -12,6 +12,8 @@ body {
 
 /* ================= NAVBAR ================= */
 
+
+
 .navbar {
   background: #111;
   position: sticky;
@@ -32,7 +34,14 @@ body {
 .logo {
   font-size: 20px;
   font-weight: bold;
-  color: #fff;
+  color: #ffffff; 
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.logo:visited {
+  color: inherit;
 }
 
 /* MENU ICON */
