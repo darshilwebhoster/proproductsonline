@@ -5,8 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pro Products Online</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background: #ffffff;
+            font-family: arial;
+            text-align: center;
+        }
+
+
+        .circle{
+    counter-reset: list-counter;
+    list-style: none;
+    float:left;
+}
+.circle li{
+    margin: 1.5em 0;    
+}
+.circle li:before{
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    width: 1em;
+    height: 1em;
+    padding: .5em;
+    margin-right: 1em;
+    border-radius: 50%;
+    border: .25em solid #ccc;
+    background: #000;
+    color: #fff;
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    
+}
+    </style>
 </head>
 <body>
-    Coming Soon....
+    <p style="font-size: 1.2em; font-weight: bold; color: #000;">Coming Soon....</p>
+    <ul class="circle">
+        <li><a href="pages/product1.html">Slovic Pull up Bar</a></li>
+        <li><a href="pages/product2.html">Product 2</a></li>
+        <li><a href="pages/product3.html">Product 3</a></li>
+    </ul>
 </body>
 </html>
