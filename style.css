@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* MENU ICON */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #111;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+}
+
+.nav-links a {
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  border-top: 1px solid #333;
+}
+
+.nav-links a:hover {
+  background: #222;
+}
+
+/* ACTIVE MENU */
+.nav-links.active {
+  display: flex;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.container {
+  padding: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* IMAGE */
+.image-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.btn {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: #ff9900;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.btn.secondary {
+  background: #ff6600;
+}
+
+/* TRUST */
+.trust {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* ADS */
+.ads {
+  background: #ccc;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+/* FEATURES */
+.features p {
+  margin-bottom: 5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* PC VIEW */
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 900px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  /* Navbar desktop */
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .nav-links a {
+    border: none;
+    margin-left: 20px;
+  }
+}
