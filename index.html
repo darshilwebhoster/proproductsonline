@@ -4,8 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pro Products Online</title>
-    <link rel="stylesheet" href="style.css">
+    
     <style>
+
+.navbar {
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff; 
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.logo:visited {
+  color: inherit;
+}
+
+/* MENU ICON */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #111;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+}
+
+.nav-links a {
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  border-top: 1px solid #333;
+}
+
+.nav-links a:hover {
+  background: #222;
+}
+
+/* ACTIVE MENU */
+.nav-links.active {
+  display: flex;
+}
+
+
+        
         body{
             background: #ffffff;
             font-family: arial;
@@ -39,9 +106,50 @@
     
 }
     </style>
+
+    <script>
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+    
 </head>
 <body>
+
+    
+    <!--             Navbar              -->
+  <header class="navbar">
+
+  <div class="nav-container">
+    
+    <!-- LOGO -->
+    <a href="/" class="logo">Pro Products Online</a>
+
+    <!-- MENU ICON (MOBILE) -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <!-- NAV LINKS -->
+    <nav class="nav-links" id="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Deals</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+  </div>
+
+</header>
+
+<!--             Navbar              -->
+
+    
     <p style="font-size: 1.2em; font-weight: bold; color: #000;">Coming Soon....</p>
+    
     <ul class="circle">
         <li><a href="pages/product1.html">Slovic Pull up Bar</a></li>
         <li><a href="#">Product 2</a></li>
